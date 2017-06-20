@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `Duralex`.`Client` (
   `rut` VARCHAR(12) NOT NULL,
   `firstName` VARCHAR(100) NOT NULL,
   `lastName` VARCHAR(100) NOT NULL,
-  `createTime` DATETIME(100) NULL DEFAULT CURRENT_TIMESTAMP,
+  `createTime` DATETIME(6) NULL,
   `address` VARCHAR(400) NULL,
   `phone1` INT NULL,
   `phone2` INT NULL,
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `Duralex`.`Lawyer` (
   `rut` VARCHAR(12) NOT NULL,
   `firstName` VARCHAR(100) NOT NULL,
   `lastName` VARCHAR(100) NOT NULL,
-  `hireDate` DATETIME(400) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `hireDate` DATETIME(6) NOT NULL ,
   `specialty` VARCHAR(400) NULL,
   `hourCost` INT NOT NULL,
   `observation` TEXT(5000) NULL,
@@ -94,7 +94,7 @@ DROP TABLE IF EXISTS `Duralex`.`Attention` ;
 
 CREATE TABLE IF NOT EXISTS `Duralex`.`Attention` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `attentionDate` DATETIME(450) NULL,
+  `attentionDate` DATETIME(6) NULL,
   `status` VARCHAR(45) NOT NULL,
   `Lawyer_rut` VARCHAR(12) NOT NULL,
   `Client_rut` VARCHAR(12) NOT NULL,
