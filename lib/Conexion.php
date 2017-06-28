@@ -6,7 +6,7 @@ class Conexion{
     var $dbusr="root";
     var $dbpwd="123";
     var $dbhost="localhost";
-    var $dbname="exportaciones";
+    var $dbname="duralex";
     
     public function Conectar(){
          $this->objconn = new mysqli($this->dbhost,

@@ -1,3 +1,6 @@
+<?php 
+    include 'librerias.php';
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -10,10 +13,10 @@ and open the template in the editor.
         <title>Login</title>
     </head>
     <body>
-        <form action="" method="post">
+        <form action="<?=URL?>controlador/validarUsuario.php" method="post">
             <div><label>Nombre</label><input id="user" type="text" name="user"></div>
-            <div><label>Clave</label><input id="pass" type="password" name="pass"></div>
-            <input id="enviar" type="button" value="Entrar">
+            <div><label>Password</label><input id="pass" type="password" name="pass"></div>
+            <input id="button" type="submit" value="Entrar">
             <div id="msjweb"></div>
         </form>
     </body>
