@@ -48,6 +48,15 @@ CREATE TABLE IF NOT EXISTS `Duralex`.`Profile` (
   UNIQUE INDEX `name_UNIQUE` (`name` ASC))
 ENGINE = InnoDB;
 
+--
+-- Volcado de datos para la tabla `profile`
+--
+
+INSERT INTO `profile` (`id`, `name`) VALUES
+(1, 'administrador'),
+(4, 'Cliente'),
+(2, 'Gerente'),
+(3, 'Secretaria');
 
 -- -----------------------------------------------------
 -- Table `Duralex`.`User`
