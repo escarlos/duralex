@@ -6,6 +6,7 @@ if(!isset($_SESSION["USR"])){
 header('Location: '.URL);
 exit;
  }
+ $oUsu=$_SESSION["USR"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,10 +34,11 @@ exit;
 			<?php foreach ($oListado->ListarUsuarios() as $value): ?>
 				<tr>
 					<td><?= $value->username?></td>
-					<td><?= $value->password ?></td>
-					<td><?= $value->profileId ?></td>
-                                        <td><a href="<?=URL?>controlador/delete.php?id=<?= $value->id?>" >ELIMINAR</a></td>
+					<td><?= '**********' ?></td>
+					<td><?= $value->profileId ?></td>                                             
+                                         <td><a href="<?=URL?>controlador/delete.php?id=<?= $value->id?>" >ELIMINAR</a></td>
 					<td><a href="<?=HOST?>controlador/editUser.php?id=<?= $value->id?>" >EDITAR</a></td>
+                                        
 				</tr>
 			<?php endforeach; ?>
 			<tr>
