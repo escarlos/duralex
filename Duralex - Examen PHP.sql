@@ -35,6 +35,13 @@ CREATE TABLE IF NOT EXISTS `Duralex`.`Client` (
   UNIQUE INDEX `rut_UNIQUE` (`rut` ASC))
 ENGINE = InnoDB;
 
+--
+-- Volcado de datos para la tabla `client`
+--
+
+INSERT INTO `client` (`rut`, `firstName`, `lastName`, `createTime`, `address`, `phone1`, `phone2`) VALUES
+('16342538-6', 'elliot', 'shorm', '2017-07-13 00:00:00.000000', 'c113cb3bcc203a072996295ab892e160', 864391949, 864391942);
+
 
 -- -----------------------------------------------------
 -- Table `Duralex`.`Profile`
@@ -78,6 +85,14 @@ CREATE TABLE IF NOT EXISTS `Duralex`.`User` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+--
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `Profile_id`) VALUES
+(2, 'eduardo', '202cb962ac59075b964b07152d234b70', 1),
+(4, 'secretaria', '202cb962ac59075b964b07152d234b70', 3),
+(5, 'gerente', '202cb962ac59075b964b07152d234b70', 2);
 
 -- -----------------------------------------------------
 -- Table `Duralex`.`Lawyer`
@@ -91,10 +106,15 @@ CREATE TABLE IF NOT EXISTS `Duralex`.`Lawyer` (
   `hireDate` DATETIME(6) NOT NULL ,
   `specialty` VARCHAR(400) NULL,
   `hourCost` INT NOT NULL,
-  `observation` TEXT(5000) NULL,
   PRIMARY KEY (`rut`))
 ENGINE = InnoDB;
 
+--
+-- Volcado de datos para la tabla `lawyer`
+--
+
+INSERT INTO `lawyer` (`rut`, `firstName`, `lastName`, `hireDate`, `specialty`, `hourCost`) VALUES
+('23223190-4', 'Matt', 'Murdock', '2017-07-08 00:00:00.000000', 'injusticia', 100);
 
 -- -----------------------------------------------------
 -- Table `Duralex`.`Attention`
